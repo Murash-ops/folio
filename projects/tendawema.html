@@ -8,19 +8,73 @@
   <link rel="stylesheet" href="../css/styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet"/>
   <style>
-    body { font-family: 'Space Grotesk', sans-serif; background: #f6f6f8; color: #222; }
-    .section-card { background: #eceef1; border-radius: 16px; padding: 2rem; margin-bottom: 2rem; }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--bg-dark, #0B090F);
+      color: var(--text-dark, #F4F1F9);
+    }
+    .section-card {
+      background: #16131D;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      color: var(--text-dark, #F4F1F9);
+    }
     .deliverables-list { list-style: none; padding: 0; }
     .deliverables-list li { display: flex; align-items: center; margin-bottom: 1rem; font-size: 1rem; }
-    .deliverables-list svg { margin-right: 0.75rem; color: #FFD600; }
-    .showcase-img { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 1rem; }
-    .btn-back { background: #FFD600; color: #222; font-weight: bold; border-radius: 999px; padding: 0.75rem 2rem; border: none; margin-top: 2rem; cursor: pointer; }
-    .project-title { font-size: 2.8rem; font-weight: 700; text-align: center; margin-top: 2rem; letter-spacing: -2px; }
-    .project-subtitle { font-size: 2.2rem; font-weight: 700; text-align: center; color: #FFD600; margin-bottom: 0.5rem; letter-spacing: -2px; }
-    .project-summary { text-align: center; font-size: 1.1rem; color: #444; margin-bottom: 2rem; }
-    .key-section { display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .deliverables-list svg { margin-right: 0.75rem; color: #8A3FFC; }
+    .showcase-img {
+      background: #27272A;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 1rem;
+    }
+    .btn-back {
+      background: #8A3FFC;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 999px;
+      padding: 0.75rem 2rem;
+      border: none;
+      margin-top: 2rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(138,63,252,0.08);
+    }
+    .project-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 2rem;
+      letter-spacing: -2px;
+      color: #8A3FFC;
+    }
+    .project-subtitle {
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-align: center;
+      color: #FFD600;
+      margin-bottom: 0.5rem;
+      letter-spacing: -2px;
+    }
+    .project-summary {
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--muted, #B3ACBF);
+      margin-bottom: 2rem;
+    }
+    .key-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
     .key-section > div { flex: 1 1 300px; }
-    .showcase-section { display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .showcase-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
     .showcase-section > div { flex: 1 1 320px; }
     @media (max-width: 900px) { .key-section, .showcase-section { flex-direction: column; } }
   </style>
