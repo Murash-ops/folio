@@ -1,10 +1,20 @@
 (function(){
   async function loadProjects(){
     try{
-      const res = await fetch('/data/projects.json');
+      // Try both absolute and relative paths for GitHub Pages compatibility
+      let res;
+      try {
+        res = await fetch('/data/projects.json');
+        if (!res.ok) throw new Error('Not found at /data/projects.json');
+      } catch (err) {
+        res = await fetch('data/projects.json');
+        if (!res.ok) throw new Error('Not found at data/projects.json');
+      }
       const projects = await res.json();
       renderProjects(projects);
     }catch(e){
+      const container = document.getElementById('projects-list');
+      if(container) container.innerHTML = `<div class="text-red-500">Failed to load projects. Please check your data/projects.json path and try again.</div>`;
       console.error('Failed to load projects:', e);
     }
   }
