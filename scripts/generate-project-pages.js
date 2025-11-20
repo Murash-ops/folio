@@ -16,7 +16,7 @@ const template = (p) => `<!doctype html>
 </head>
 <body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-text-primary-dark">
 <header class="border-b py-4 px-6">
-  <a href="/index.html" class="font-bold">Portfolio</a>
+  <a href="/index.html" class="font-bold">CKM</a>
 </header>
 <main class="max-w-4xl mx-auto p-6">
   <h1 class="text-3xl font-bold mb-4">${p.title}</h1>
