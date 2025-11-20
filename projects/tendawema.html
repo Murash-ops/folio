@@ -10,35 +10,37 @@
   <style>
     body {
       font-family: 'Space Grotesk', sans-serif;
-      background: var(--bg-dark, #0B090F);
-      color: var(--text-dark, #F4F1F9);
+      background: #f6f6f8;
+      color: #222;
     }
     .section-card {
-      background: #16131D;
+      background: #fff;
       border-radius: 16px;
       padding: 2rem;
       margin-bottom: 2rem;
-      color: var(--text-dark, #F4F1F9);
+      color: #222;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
     .deliverables-list { list-style: none; padding: 0; }
     .deliverables-list li { display: flex; align-items: center; margin-bottom: 1rem; font-size: 1rem; }
-    .deliverables-list svg { margin-right: 0.75rem; color: #8A3FFC; }
+    .deliverables-list svg { margin-right: 0.75rem; color: #FFD600; }
     .showcase-img {
-      background: #27272A;
+      background: #fff;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
       padding: 1rem;
+      margin-bottom: 1.5rem;
     }
     .btn-back {
-      background: #8A3FFC;
-      color: #fff;
+      background: #FFD600;
+      color: #222;
       font-weight: bold;
       border-radius: 999px;
       padding: 0.75rem 2rem;
       border: none;
       margin-top: 2rem;
       cursor: pointer;
-      box-shadow: 0 2px 8px rgba(138,63,252,0.08);
+      box-shadow: 0 2px 8px rgba(255,214,0,0.08);
     }
     .project-title {
       font-size: 2.8rem;
@@ -46,7 +48,7 @@
       text-align: center;
       margin-top: 2rem;
       letter-spacing: -2px;
-      color: #8A3FFC;
+      color: #1a2236;
     }
     .project-subtitle {
       font-size: 2.2rem;
@@ -59,7 +61,7 @@
     .project-summary {
       text-align: center;
       font-size: 1.1rem;
-      color: var(--muted, #B3ACBF);
+      color: #444;
       margin-bottom: 2rem;
     }
     .key-section {
@@ -73,9 +75,16 @@
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
     }
     .showcase-section > div { flex: 1 1 320px; }
+    .showcase-socials {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 1rem;
+      margin-top: 0.5rem;
+    }
     @media (max-width: 900px) { .key-section, .showcase-section { flex-direction: column; } }
   </style>
 </head>
@@ -102,22 +111,16 @@
       </div>
     </div>
     <h2 style="font-size:1.5rem; font-weight:700; text-align:center; margin-bottom:1.5rem;">Project Showcase</h2>
-    <div class="showcase-section" style="display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; justify-content: center;">
-      <div class="showcase-img" style="background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 1rem;">
-        <img src="../assets/images/projects/tendawema/tendawema-poster.png" alt="Tenda Wema Poster" style="width:100%; max-width:340px;"/>
-      </div>
-      <div>
-        <div class="showcase-img" style="background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 1rem; margin-bottom: 1.5rem;">
-          <img src="../assets/images/projects/tendawema/tendawema-businesscard.png" alt="Tenda Wema Business Card" style="width:100%; max-width:340px;"/>
-        </div>
-        <div class="showcase-img" style="background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 1rem;">
-          <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:0.5rem;">Social Channels</h3>
-          <ul style="color:#444; font-size:1rem; list-style:disc inside;">
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Twitter</li>
-          </ul>
-        </div>
+    <div class="showcase-section">
+      <div class="showcase-img"><img src="../assets/images/projects/tendawema/tendawema-poster.png" alt="Tenda Wema Poster" style="width:100%; max-width:340px;"/></div>
+      <div class="showcase-img"><img src="../assets/images/projects/tendawema/tendawema-businesscard.png" alt="Tenda Wema Business Card" style="width:100%; max-width:340px;"/></div>
+      <div class="showcase-img">
+        <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:0.5rem;">Social Channels</h3>
+        <ul style="color:#444; font-size:1rem; list-style:disc inside;">
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Twitter</li>
+        </ul>
       </div>
     </div>
     <div class="section-card" style="text-align:center;">
