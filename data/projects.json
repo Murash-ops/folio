@@ -58,5 +58,15 @@
     "hero": "assets/images/projects/artisan-doc-hero.jpg",
     "date": "2022-11-08",
     "contentUrl": "projects/documentary-the-artisan.html"
+  },
+  {
+    "title": "Tenda Wema Autogarage",
+    "slug": "tendawema-autogarage",
+    "shortDescription": "A branding project for a local autogarage aiming to grow its presence through modern marketing. The work focused on creating a clear, professional identity that strengthens customer trust and positions the business for long-term growth.",
+    "tags": ["branding","marketing","design","local-business"],
+    "thumb": "assets/images/projects/tendawema-thumb.jpg",
+    "hero": "assets/images/projects/tendawema-hero.jpg",
+    "date": "2025-11-20",
+    "contentUrl": "projects/tendawema.html"
   }
 ]
