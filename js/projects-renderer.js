@@ -28,11 +28,7 @@
           <h3 class="text-lg font-bold">${p.title}</h3>
           <p class="text-sm text-gray-600 dark:text-gray-300">${p.shortDescription}</p>
           <div class="mt-3 flex gap-2 flex-wrap">${p.tags.map(t=>`<span class="px-2 py-1 rounded-full text-xs bg-gray-200 dark:bg-gray-700">${t}</span>`).join('')}</div>
-          <div class="mt-3 flex gap-2 flex-wrap">
-            <img src="${p.poster}" alt="Poster" class="h-24 rounded" loading="lazy"/>
-            <img src="${p.businessCard}" alt="Business Card" class="h-24 rounded" loading="lazy"/>
-            <img src="${p.hero}" alt="Hero" class="h-24 rounded" loading="lazy"/>
-          </div>
+          <!-- Additional images are only shown within the project details page -->
         </a>
       </article>
     `).join('');
