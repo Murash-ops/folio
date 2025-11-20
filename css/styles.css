@@ -44,30 +44,14 @@ body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, '
 .layout-content-container > header + div{
   padding-top:1.25rem;
 }
-
-/* Image utilities */
-.hero-img{width:100%;height:auto;object-fit:cover;border-radius:8px}
-.img-cover{width:100%;height:100%;object-fit:cover}
-.card-img-round{width:100%;height:auto;border-radius:12px;overflow:hidden}
-.figure-centered{display:flex;align-items:center;justify-content:center}
-
-/* Header spacing normalization */
-.site-header{padding:0.5rem 0;background:transparent}
-.site-header .nav{display:flex;gap:1rem;align-items:center}
-
-/* Focus styles for accessibility */
-button:focus, a:focus{outline:3px solid rgba(59,130,246,0.25);outline-offset:2px}
-
-/* Small screens tweak */
-@media (max-width:520px){
-  .layout-container{padding-left:0.75rem;padding-right:0.75rem}
-  .pill{font-size:0.9rem;padding:0.35rem 0.9rem}
-}
 /* small utility for card images to match designs */
 .card-img-round{
   border-radius:0.75rem;
   overflow:hidden;
 }
+/* Simple aspect ratio utilities (native where supported) */
+.ratio-4-3{aspect-ratio:4/3}
+.ratio-16-9{aspect-ratio:16/9}
 /* make images and media fluid by default */
 img, picture, video, svg{
   max-width:100%;
