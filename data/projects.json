@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Secure Network Infrastructure",
+    "slug": "secure-network-infrastructure",
+    "shortDescription": "Designed and implemented a multi-tiered secure network architecture on AWS.",
+    "tags": ["Cloud Security","AWS","Networking"],
+    "thumb": "assets/images/projects/secure-network-thumb.jpg",
+    "hero": "assets/images/projects/secure-network-hero.jpg",
+    "date": "2024-10-01",
+    "contentUrl": "projects/secure-network-infrastructure.html"
+  }
+]
