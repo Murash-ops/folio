@@ -1,50 +1,70 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tenda Wema Autogarage — Charles Kiyo Muratha</title>
-<link rel="stylesheet" href="../css/styles.css"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Tenda Wema Autogarage — Charles Kiyo Muratha</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Space Grotesk', sans-serif; background: #f6f6f8; color: #222; }
+    .section-card { background: #eceef1; border-radius: 16px; padding: 2rem; margin-bottom: 2rem; }
+    .deliverables-list { list-style: none; padding: 0; }
+    .deliverables-list li { display: flex; align-items: center; margin-bottom: 1rem; font-size: 1rem; }
+    .deliverables-list svg { margin-right: 0.75rem; color: #FFD600; }
+    .showcase-img { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 1rem; }
+    .btn-back { background: #FFD600; color: #222; font-weight: bold; border-radius: 999px; padding: 0.75rem 2rem; border: none; margin-top: 2rem; cursor: pointer; }
+    .project-title { font-size: 2.8rem; font-weight: 700; text-align: center; margin-top: 2rem; letter-spacing: -2px; }
+    .project-subtitle { font-size: 2.2rem; font-weight: 700; text-align: center; color: #FFD600; margin-bottom: 0.5rem; letter-spacing: -2px; }
+    .project-summary { text-align: center; font-size: 1.1rem; color: #444; margin-bottom: 2rem; }
+    .key-section { display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .key-section > div { flex: 1 1 300px; }
+    .showcase-section { display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .showcase-section > div { flex: 1 1 320px; }
+    @media (max-width: 900px) { .key-section, .showcase-section { flex-direction: column; } }
+  </style>
 </head>
-<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-text-primary-dark">
-<header class="border-b py-4 px-6">
-  <a href="/index.html" class="font-bold">Portfolio</a>
-</header>
-<main class="max-w-4xl mx-auto p-6">
-  <h1 class="text-3xl font-bold mb-4">Tenda Wema Autogarage</h1>
-  <img src="../assets/images/projects/tendawema/tendawema-hero.png" alt="Tenda Wema Autogarage logo" class="w-full max-w-md mx-auto rounded-lg mb-4"/>
-  <p class="text-gray-700 mb-4">A branding project for a local autogarage aiming to grow its presence through modern marketing. Deliverables included a custom logo, poster, business card, and setup of social media channels to strengthen customer trust and position the business for long-term growth.</p>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-    <div>
-      <h2 class="text-lg font-semibold mb-2">Logo</h2>
-      <img src="../assets/images/projects/tendawema/tendawema-thumb.png" alt="Tenda Wema Logo" class="w-full rounded-md"/>
+<body>
+  <main class="max-w-4xl mx-auto p-4">
+    <div class="project-title">TENDA WEMA <span class="project-subtitle">Autogarage</span></div>
+    <div class="project-summary">A comprehensive branding project for a local auto garage, establishing a strong, trustworthy market presence.</div>
+    <div class="section-card" style="text-align:center;">
+      <img src="../assets/images/projects/tendawema/tendawema-thumb.png" alt="Tenda Wema Logo" style="max-width:320px; width:100%; margin:auto;"/>
     </div>
-    <div>
-      <h2 class="text-lg font-semibold mb-2">Poster</h2>
-      <img src="../assets/images/projects/tendawema/tendawema-poster.png" alt="Tenda Wema Poster" class="w-full rounded-md"/>
+    <div class="key-section">
+      <div>
+        <h2 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;">Project Goal</h2>
+        <p style="color:#444;">The primary objective was to craft a modern and professional brand identity for Tenda Wema Autogarage. The goal was to build customer trust and position the business for long-term growth by creating a memorable logo and a cohesive set of marketing materials to increase their local presence and attract new clients.</p>
+      </div>
+      <div>
+        <h2 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;">Key Deliverables</h2>
+        <ul class="deliverables-list">
+          <li><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg> <b>Custom Logo Design</b> <span style="color:#888;">A unique emblem combining automotive and tool imagery.</span></li>
+          <li><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg> <b>Promotional Poster</b> <span style="color:#888;">Eye-catching design for special offers and services.</span></li>
+          <li><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4"/></svg> <b>Business Card</b> <span style="color:#888;">Professional cards with essential contact information.</span></li>
+          <li><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/></svg> <b>Social Media Kit</b> <span style="color:#888;">Branded assets for a consistent online presence.</span></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <h2 class="text-lg font-semibold mb-2">Business Card</h2>
-      <img src="../assets/images/projects/tendawema/tendawema-businesscard.png" alt="Tenda Wema Business Card" class="w-full rounded-md"/>
+    <h2 style="font-size:1.5rem; font-weight:700; text-align:center; margin-bottom:1.5rem;">Project Showcase</h2>
+    <div class="showcase-section">
+      <div class="showcase-img"><img src="../assets/images/projects/tendawema/tendawema-poster.png" alt="Tenda Wema Poster" style="width:100%; max-width:340px;"/></div>
+      <div class="showcase-img"><img src="../assets/images/projects/tendawema/tendawema-businesscard.png" alt="Tenda Wema Business Card" style="width:100%; max-width:340px;"/></div>
+      <div class="showcase-img">
+        <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:0.5rem;">Social Channels</h3>
+        <ul style="color:#444; font-size:1rem; list-style:disc inside;">
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Twitter</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="mb-6">
-    <h2 class="text-lg font-semibold mb-2">Social Media Channels</h2>
-    <ul class="list-disc pl-6 text-gray-700">
-      <li>Facebook</li>
-      <li>Instagram</li>
-      <li>Twitter</li>
-      <li>Other platforms as needed</li>
-    </ul>
-  </div>
-  <div class="flex gap-2 mb-6">
-    <span class="px-3 py-1 bg-gray-200 rounded-full text-sm">branding</span>
-    <span class="px-3 py-1 bg-gray-200 rounded-full text-sm">marketing</span>
-    <span class="px-3 py-1 bg-gray-200 rounded-full text-sm">design</span>
-    <span class="px-3 py-1 bg-gray-200 rounded-full text-sm">local-business</span>
-  </div>
-  <p>Project details and case study content can go here. Add more images, results, and client feedback as needed.</p>
-  <p class="mt-6"><a href="/projects_page.html" class="text-primary">Back to projects</a></p>
-</main>
+    <div class="section-card" style="text-align:center;">
+      <h2 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;">Project Impact</h2>
+      <p style="color:#444;">The new branding successfully elevated Tenda Wema Autogarage's image, resulting in increased customer inquiries and a stronger, more professional presence in the local automotive service industry. The cohesive design language across all materials has significantly improved brand recognition.</p>
+      <button class="btn-back" onclick="window.location.href='../projects_page.html'">Back to Projects</button>
+    </div>
+  </main>
 </body>
 </html>
