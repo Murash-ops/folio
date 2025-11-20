@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog Post - A Deep Dive into Modern Web Development</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Lora:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link rel="stylesheet" href="css/styles.css"/>
+<link rel="icon" href="assets/favicon.svg"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                        colors: {
+                            "primary": "#8A3FFC",
+                            "background-light": "#f6f6f8",
+                            "background-dark": "#0B090F",
+                            "card-light": "#FFFFFF",
+                            "card-dark": "#16131D",
+                            "text-light": "#111827",
+                            "text-dark": "#F4F1F9",
+                            "text-text-light": "#111827",
+                            "text-text-dark": "#F4F1F9",
+                            "subtext-light": "#6B7280",
+                            "subtext-dark": "#B3ACBF",
+                            "border-light": "#E5E7EB",
+                            "border-dark": "#27272A",
+                            "surface-dark": "#16131D"
+                        },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Lora", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        .prose {
+          --tw-prose-body: #131313;
+          --tw-prose-headings: #131313;
+          --tw-prose-lead: #3a3a3a;
+          --tw-prose-links: #4C2FFC;
+          --tw-prose-bold: #131313;
+          --tw-prose-counters: #4C2FFC;
+          --tw-prose-bullets: #4C2FFC;
+          --tw-prose-hr: #e5e7eb;
+          --tw-prose-quotes: #131313;
+          --tw-prose-quote-borders: #4C2FFC;
+          --tw-prose-captions: #6b7280;
+          --tw-prose-code: #111827;
+          --tw-prose-pre-code: #e5e7eb;
+          --tw-prose-pre-bg: #1f2937;
+          --tw-prose-th-borders: #d1d5db;
+          --tw-prose-td-borders: #e5e7eb;
+          --tw-prose-invert-body: #d1d5db;
+          --tw-prose-invert-headings: #FFFBF2;
+          --tw-prose-invert-lead: #a1a1a1;
+          --tw-prose-invert-links: #98F8C3;
+          --tw-prose-invert-bold: #FFFBF2;
+          --tw-prose-invert-counters: #98F8C3;
+          --tw-prose-invert-bullets: #98F8C3;
+          --tw-prose-invert-hr: #3a3a3a;
+          --tw-prose-invert-quotes: #f3f4f6;
+          --tw-prose-invert-quote-borders: #98F8C3;
+          --tw-prose-invert-captions: #9ca3af;
+          --tw-prose-invert-code: #FFFBF2;
+          --tw-prose-invert-pre-code: #d1d5db;
+          --tw-prose-invert-pre-bg: #1E1E1E;
+          --tw-prose-invert-th-borders: #4b5563;
+          --tw-prose-invert-td-borders: #374151;
+        }
+        .prose-lg {
+            line-height: 1.7;
+        }
+        .prose :where(blockquote):not(:where([class~="not-prose"] *)) {
+            position: relative;
+            padding-left: 2.25rem;
+            border-left: none;
+            font-style: normal;
+        }
+        .prose :where(blockquote):not(:where([class~="not-prose"] *))::before {
+            content: "“";
+            position: absolute;
+            left: -0.25rem;
+            top: -1.5rem;
+            font-size: 6rem;
+            font-family: 'Lora', serif;
+            font-weight: 700;
+            color: #4C2FFC;
+            opacity: 0.1;
+            line-height: 1;
+        }
+        .dark .prose :where(blockquote):not(:where([class~="not-prose"] *))::before {
+            color: #98F8C3;
+            opacity: 0.2;
+        }
+        .prose :where(ul > li):not(:where([class~="not-prose"] *))::before {
+            background-color: #4C2FFC;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 9999px;
+            margin-top: 0.7em;
+            transform: rotate(45deg);
+        }
+        .dark .prose :where(ul > li):not(:where([class~="not-prose"] *))::before {
+            background-color: #98F8C3;
+        }
+        .prose :where(h2):not(:where([class~="not-prose"] *)) {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .prose :where(h2):not(:where([class~="not-prose"] *))::before {
+            content: '';
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 0.25rem;
+            background-color: #4C2FFC;
+            transform: rotate(45deg);
+        }
+        .dark .prose :where(h2):not(:where([class~="not-prose"] *))::before {
+            background-color: #98F8C3;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-gray-200 dark:border-surface-dark/10 px-4 sm:px-10 py-3">
+    <div class="flex items-center gap-4 text-black dark:text-white">
+        <div class="size-6 text-primary">
+            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_319)">
+                    <path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+                </g>
+                <defs>
+                    <clipPath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clipPath>
+                </defs>
+            </svg>
+        </div>
+        <h2 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em]">Portfolio</h2>
+    </div>
+            <div class="hidden md:flex flex-1 justify-end gap-8">
+        <div class="flex items-center gap-9">
+            <a class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="home_page.html">Home</a>
+            <a class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="about_page.html">About</a>
+            <a class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="projects_page.html">Projects</a>
+            <a aria-current="page" class="text-primary dark:text-primary text-sm font-bold leading-normal" href="blog_page.html">Blog</a>
+        </div>
+        <a href="contact_page.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em]">
+            <span class="truncate">Get in Touch</span>
+        </a>
+    </div>
+</header>
+<main class="flex-1">
+<div class="container mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+<article>
+<div class="space-y-4 text-center">
+<h1 class="font-display text-4xl font-bold leading-tight tracking-tighter text-text-light dark:text-text-dark sm:text-5xl">A Deep Dive into Modern Web Development</h1>
+<p class="font-display text-sm font-normal text-text-light/60 dark:text-text-dark/60">Alex Johnson • August 15, 2024 • 12 min read</p>
+<div class="flex flex-wrap items-center justify-center gap-2 pt-2">
+<div class="flex h-7 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 px-3 ring-1 ring-inset ring-primary/20">
+<p class="text-xs font-medium text-primary">Next.js</p>
+</div>
+<div class="flex h-7 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 px-3 ring-1 ring-inset ring-primary/20">
+<p class="text-xs font-medium text-primary">TypeScript</p>
+</div>
+<div class="flex h-7 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 px-3 ring-1 ring-inset ring-primary/20">
+<p class="text-xs font-medium text-primary">Tailwind CSS</p>
+</div>
+</div>
+</div>
+<div class="prose prose-lg dark:prose-invert mx-auto mt-12 max-w-none font-body text-text-light/80 dark:text-text-dark/80">
+<p class="lead">Building dynamic, creative portfolio websites requires a blend of cutting-edge technology and thoughtful design. This article explores the powerful combination of Next.js (App Router), TypeScript, and Tailwind CSS to create a site that is not only visually stunning but also performant and maintainable.</p>
+<p>The landscape of web development is in constant flux, with new frameworks and libraries emerging at a dizzying pace. However, some combinations stand out for their synergy and developer experience. The stack we're exploring today is a prime example, offering type safety, a utility-first CSS framework, and a robust React framework that handles everything from static site generation to server-side rendering with ease.</p>
+<img class="rounded-xl my-8 w-full object-cover aspect-[16/9] shadow-lg shadow-black/5 dark:shadow-black/20" alt="Abstract colorful gradient wave pattern representing modern technology" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq2ttIu0nkpS6mAc3Ifz1g5lqjyxdtama1W8OYILBHtETuJKpNBK2qddrpJhWoYyWDJjRcDZuPipbXWukDsXCfmXM2KRkBTnG4o7FfKOZPoUBlE1CFs4XMwfwGY7d1LFpeHHbq9hpnAnXn9e8r1TpXSg7lFt2WifU6pHyyKHtPuNfS96aEk8dEPWil4WsOP4KcFiL4AQgFBg6ZDWnA7mvdfFMeFOgy-EpWmETv9mJIzK_eh1O1JN7nE1mrrXuBqrkOx_InRPj7ZBIu"/>
+<h2>Why Next.js App Router?</h2>
+<p>The introduction of the App Router in Next.js 13 marked a paradigm shift in how we build React applications. It embraces server components by default, leading to smaller client-side bundles and faster initial page loads. This server-centric approach simplifies data fetching and state management, allowing developers to focus more on building features and less on boilerplate.</p>
+<blockquote>
+<p>"The App Router encourages a mental model that is closer to the web's roots, while providing all the modern conveniences we've come to expect from a full-stack framework."</p>
+</blockquote>
+<h2>Enhancing with TypeScript and Tailwind CSS</h2>
+<p>TypeScript brings static typing to JavaScript, catching errors during development rather than in production. When combined with Next.js, it provides a seamless and robust development experience. Tailwind CSS, on the other hand, revolutionizes styling by providing low-level utility classes that let you build custom designs without ever leaving your HTML.</p>
+<ul>
+<li><strong>Type Safety:</strong> Reduces runtime errors and improves code quality.</li>
+<li><strong>Developer Experience:</strong> Autocompletion and type inference speed up development.</li>
+<li><strong>Styling Velocity:</strong> Rapidly build and prototype UIs with utility classes.</li>
+<li><strong>Maintainability:</strong> A consistent design system is easy to maintain and scale.</li>
+</ul>
+<h2>Code in Action</h2>
+<p>Here’s a small snippet demonstrating how these technologies work together in a simple React component:</p>
+<div class="my-8 rounded-xl bg-[#222738] shadow-lg dark:shadow-black/20 overflow-hidden ring-1 ring-black/5 dark:ring-white/10">
+<div class="flex items-center justify-between px-4 py-2.5 bg-black/10 text-xs text-gray-400">
+<div class="flex items-center gap-2">
+<span class="h-3 w-3 rounded-full bg-[#E6482D]"></span>
+<span class="h-3 w-3 rounded-full bg-yellow-500"></span>
+<span class="h-3 w-3 rounded-full bg-[#98F8C3]"></span>
+<span class="ml-4 font-mono">components/Card.tsx</span>
+</div>
+<button class="flex items-center gap-1.5 rounded-md bg-white/5 px-2 py-1 text-gray-300 transition-colors hover:bg-white/10 hover:text-white">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+                                Copy
+                            </button>
+</div>
+<pre class="p-4 text-sm overflow-x-auto"><code class="language-tsx" style="font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;">
+<span style="color: #89ddff;">import</span><span style="color: #f0f6fc;"> React </span><span style="color: #89ddff;">from</span><span style="color: #f0f6fc;"> </span><span style="color: #9ecbff;">'react'</span><span style="color: #f0f6fc;">;
+</span><span style="color: #ff7b72;">interface</span><span style="color: #f0f6fc;"> </span><span style="color: #d2a8ff;">CardProps</span><span style="color: #f0f6fc;"> {
+  </span><span style="color: #79c0ff;">title</span><span style="color: #ff7b72;">:</span><span style="color: #f0f6fc;"> </span><span style="color: #d2a8ff;">string</span><span style="color: #f0f6fc;">;
+  </span><span style="color: #79c0ff;">children</span><span style="color: #ff7b72;">:</span><span style="color: #f0f6fc;"> React.</span><span style="color: #d2a8ff;">ReactNode</span><span style="color: #f0f6fc;">;
+}
+</span><span style="color: #ff7b72;">export const</span><span style="color: #f0f6fc;"> </span><span style="color: #d2a8ff;">Card</span><span style="color: #ff7b72;">:</span><span style="color: #f0f6fc;"> React.</span><span style="color: #d2a8ff;">FC</span><span style="color: #f0f6fc;">&lt;</span><span style="color: #d2a8ff;">CardProps</span><span style="color: #f0f6fc;">&gt; = (</span><span style="color: #ffa657;">{ title, children }</span><span style="color: #f0f6fc;">) =&gt; {
+  </span><span style="color: #ff7b72;">return</span><span style="color: #f0f6fc;"> (
+    &lt;</span><span style="color: #7ee787;">div</span><span style="color: #f0f6fc;"> </span><span style="color: #79c0ff;">className</span><span style="color: #f0f6fc;">=</span><span style="color: #a5d6ff;">"bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"</span><span style="color: #f0f6fc;">&gt;
+      &lt;</span><span style="color: #7ee787;">h3</span><span style="color: #f0f6fc;"> </span><span style="color: #79c0ff;">className</span><span style="color: #f0f6fc;">=</span><span style="color: #a5d6ff;">"text-xl font-bold mb-2"</span><span style="color: #f0f6fc;">&gt;{title}&lt;/</span><span style="color: #7ee787;">h3</span><span style="color: #f0f6fc;">&gt;
+      &lt;</span><span style="color: #7ee787;">div</span><span style="color: #f0f6fc;">&gt;{children}&lt;/</span><span style="color: #7ee787;">div</span><span style="color: #f0f6fc;">&gt;
+    &lt;/</span><span style="color: #7ee787;">div</span><span style="color: #f0f6fc;">&gt;
+  );
+};</span>
+                          </code></pre>
+</div>
+<p>This component is fully typed, styled with utility classes, and ready to be used within a Next.js application, demonstrating the seamless integration of these three powerful tools.</p>
+<h2>Visualizing Network Security Concepts</h2>
+<p>Diagrams are essential for explaining complex topics in cloud and network security. An image with a descriptive caption can illustrate architectures, data flows, or threat models far more effectively than text alone.</p>
+<figure class="my-8 rounded-xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black/20">
+<img class="w-full rounded-lg" alt="A network diagram showing a secure cloud infrastructure with VPC, subnets, and firewalls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyIxT5R4CyiAGkCRckcu0yGoJ_SI51OvwnLSQHeL_jTNQ5ETl-yteljF7X-R5I2HZzza_n6wRChs6sqTgLAAaQk3MhB9tRgvgQU0vtio0-3fqRQURAqax028Xlivmfb2i8dMgrod_9MX2tYndvNtnKT6kLQfxiGg86Rs_EZZK0b416aopR4xR1kLz07AkmLK3eOO8XwcuAiZYFfFxlibx1dpaeWLn7_lQzHGEp5Ht9WuupulF2sIKODhaA4k0juh8YhDJBaAERl-_h"/>
+<figcaption class="mt-4 text-center text-sm text-text-light/60 dark:text-text-dark/60">Fig. 1: A simplified diagram of a secure Virtual Private Cloud (VPC) setup in AWS.</figcaption>
+</figure>
+<h2>Showcasing Design and Video</h2>
+<p>For creative fields like graphic design and video editing, visual content is paramount. The layout should adapt to showcase this work beautifully.</p>
+<h3>Graphic Design Showcase</h3>
+<p>A two-column grid is perfect for comparing designs or showing a sequence of images without overwhelming the reader.</p>
+<div class="my-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+<img class="rounded-xl object-cover shadow-lg shadow-black/5 dark:shadow-black/20" alt="A vibrant logo design for a tech startup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ0ChQQbdOXOvZRcIGBGx5lsOKdw-MRWbnjEgFDut9DmYs36AMWqy2Cfw2b6_hynkwxB44RmUFQLydKb8vSbfYUA0xQYFXHbHIBDDX8FIoOWLdiyYtsB9BmvfPYOUN3IrbdVU7yPWObwJoDZ9peDSLaqimxPL0TSTxNR7EfECFhZGO-UmCNMlMEH2zK46eWa9phnMoLbDRF-SRlvoHJ_bNRIE5AhsjS1T0rCZcZ7hymBzkpE1mSuPqp0Vk4PSZVXBdhitV57_dpkRy"/>
+<img class="rounded-xl object-cover shadow-lg shadow-black/5 dark:shadow-black/20" alt="A mockup of the logo on a business card" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgagJC690F-xQl5CfZ8ioC3ZkgX6lZqvQK9bqQgNATvWoHALGubDhO3ztzlWG_PNCCxCA198dB44t8jEehw_eKdfk7Zr1ppqxUjn5PcHGHOSHapPqlBITa5NYVSqWlZnUf_XZpUMxPr6ci6RrPG8Vfcf98e6Y8k84qG1UZL6qMCWp5GpyzSKcjo8H3QKbc5tghpoxf9384LwyQflnzoIMHAibniZKXoH4MFdQ7XqX3vZa9FZYnhnMudhkOPnlfEM3yu30EJ3hdkEcZ"/>
+</div>
+<h3>Embedded Video Content</h3>
+<p>Embedding videos directly into the post provides an immersive experience for showcasing motion graphics or video editing projects.</p>
+<div class="my-8 aspect-video w-full overflow-hidden rounded-xl shadow-lg dark:shadow-black/20 ring-1 ring-black/5 dark:ring-white/10">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="h-full w-full" frameborder="0" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Sample Video"></iframe>
+</div>
+<p>By integrating these diverse content types, a single blog post can effectively communicate complex technical concepts, showcase creative work, and engage the reader on multiple levels.</p>
+</div>
+<div class="mt-16 border-t border-black/10 dark:border-white/10 pt-10">
+<div class="flex flex-col items-center gap-6 text-center sm:flex-row sm:text-left">
+<img class="h-24 w-24 rounded-full object-cover" alt="Portrait of Alex Johnson, a software developer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAY0SUlCe6W1F1zRD4NKXBG1Uaiakz07kmc2IySM7qPyba4zaqh9LAmuJUkt5tysOiwFGsnj_IcFAisHBuXkNZB1juUKqiGD1tVTYZ9canttS8gAWBLm0vj2M6NHKNWIzBpoIAnZT4XjCoGXM2yO_2x4hHIGy3vgwozbRnitq04STqCcptc9k7Lhg9J9WRXxThWCbEi-cOE2A5201vGJQwR56jPyuEKlMoROgNipAF-24eeN0exQEHxAIn2pzZvMXnddFQJrPavkAq"/>
+<div>
+<h3 class="font-display text-xl font-bold text-text-light dark:text-text-dark">Alex Johnson</h3>
+<p class="font-body text-base text-text-light/70 dark:text-text-dark/70 mt-1">A creative technologist passionate about building beautiful, functional, and user-centric digital experiences. Exploring the intersection of design, technology, and growth.</p>
+<div class="mt-4 flex justify-center gap-4 sm:justify-start">
+<span class="text-text-light/60 dark:text-text-dark/60 opacity-60 cursor-not-allowed" aria-disabled="true" aria-label="Facebook">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</span>
+<span class="text-text-light/60 dark:text-text-dark/60 opacity-60 cursor-not-allowed" aria-disabled="true" aria-label="X">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<section class="mt-16 border-t border-black/10 dark:border-white/10 pt-10">
+<h2 class="text-center font-display text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-left">Related Articles</h2>
+<div class="mt-8 grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+<div class="group flex flex-col overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm transition-all hover:shadow-lg dark:border-white/10 dark:bg-black/20 dark:hover:border-white/20">
+<span class="block opacity-60 cursor-not-allowed" aria-disabled="true">
+<img class="h-48 w-full object-cover" alt="Abstract geometric shapes in pastel colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc4qosrx84IN6KhfFs0jnP9pQRexnGCfxI0OST4u171qyvCpaOe6bLpo4DL074L61wz4vG8DRo6PF0O1rOPKA88u_1ZgKbpbZFRBa60g6L66gQvf4a4hX8_E8cUvBkvldsViqN6cx_7A27LTUMK5ub6Y_At-csf0-8kAZTDJrNau7PTR9L5oR0CQqdZqX5oENxcZ3L7QIb38WOcRR1MoDrKbVpCZtG055GtMLFajsWio4QaIDJnMXAyEfBNyjOw0FKnAVRhZyu2BKt"/>
+<div class="p-6">
+<h3 class="font-display text-lg font-bold text-text-light group-hover:text-primary dark:text-text-dark">The Art of Component Design Systems</h3>
+<p class="mt-2 font-body text-sm text-text-light/70 dark:text-text-dark/70">Learn how to build scalable and maintainable component libraries for your projects.</p>
+</div>
+</span>
+</div>
+<div class="group flex flex-col overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm transition-all hover:shadow-lg dark:border-white/10 dark:bg-black/20 dark:hover:border-white/20">
+<span class="block opacity-60 cursor-not-allowed" aria-disabled="true">
+<img class="h-48 w-full object-cover" alt="Lines of glowing code on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCtnLrF4lrD7hZjzyEhL3dHAKqnHwjVJa49-aw012XGFJ984uK1WMkWU4xJBxHEVCpkXlBCUNO2ou4Kv9hsr7DaTPyW2M9mi9GHsy_As0octdtRYm-qpe4RZwu3edqlJdFMqmxcEx_6j33ffWT-trciKvq1kmy_32WHMKPBcc7oyRwRHXf6ZQaGiAp6bfsZ1scGdDYbY3JVVLebB-fHmbxF7zPDsa8ri98-rme9BEQrxF772vUGr3Rr5q0BG3aNeUPBw7B3-5wczNi"/>
+<div class="p-6">
+<h3 class="font-display text-lg font-bold text-text-light group-hover:text-primary dark:text-text-dark">Optimizing Performance in Next.js</h3>
+<p class="mt-2 font-body text-sm text-text-light/70 dark:text-text-dark/70">A practical guide to server components, caching strategies, and image optimization.</p>
+</div>
+</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="border-t border-black/10 dark:border-white/10">
+<div class="container mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6 lg:px-8">
+<p class="text-sm text-text-light/60 dark:text-text-dark/60">© 2024 Alex Johnson. All rights reserved.</p>
+<nav class="flex gap-6 text-sm font-medium">
+<span class="text-text-light/70 opacity-60 cursor-not-allowed" aria-disabled="true">Home</span>
+<span class="text-text-light/70 opacity-60 cursor-not-allowed" aria-disabled="true">Blog</span>
+<span class="text-text-light/70 opacity-60 cursor-not-allowed" aria-disabled="true">About</span>
+</nav>
+</div>
+</footer>
+</div>
+
+</body></html>

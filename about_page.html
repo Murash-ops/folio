@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About - Creator's Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Lora:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link rel="stylesheet" href="css/styles.css"/>
+<link rel="icon" href="assets/favicon.svg"/>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#8A3FFC",
+                    "background-light": "#f6f6f8",
+                    "background-dark": "#0B090F",
+                    "card-light": "#FFFFFF",
+                    "card-dark": "#16131D",
+                    "text-light": "#111827",
+                    "text-dark": "#F4F1F9",
+                    "text-text-light": "#111827",
+                    "text-text-dark": "#F4F1F9",
+                    "subtext-light": "#6B7280",
+                    "subtext-dark": "#B3ACBF",
+                    "border-light": "#E5E7EB",
+                    "border-dark": "#27272A",
+                    "surface-dark": "#16131D"
+                },
+                fontFamily: {
+                    "display": ["Space Grotesk", "sans-serif"],
+                    "body": ["Lora", "serif"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+            },
+        },
+    }
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex w-full flex-col">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-5">
+<div class="layout-content-container flex flex-col w-full max-w-4xl flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-gray-200 dark:border-surface-dark/10 px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-black dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em]">Portfolio</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="home_page.html">Home</a>
+<a aria-current="page" class="text-primary dark:text-primary text-sm font-bold leading-normal" href="about_page.html">About</a>
+<a class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="projects_page.html">Projects</a>
+<a class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="blog_page.html">Blog</a>
+</div>
+<a href="contact_page.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Get in Touch</span>
+</a>
+</div>
+</header>
+<main class="flex flex-col gap-16 md:gap-24">
+<section class="flex flex-col gap-2">
+<h1 class="font-display text-4xl md:text-5xl font-bold tracking-tight">/about-me</h1>
+<p class="font-body text-base md:text-lg text-text-secondary-light dark:text-text-secondary-dark">A little bit about my journey</p>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
+<div class="w-full h-auto aspect-square md:aspect-[3/4] col-span-1 rounded-lg overflow-hidden border-2 border-border-light dark:border-border-dark p-2 rotate-[-2deg] transition-transform hover:rotate-0 hover:scale-105">
+<img src="assets/images/about-portrait.jpg" alt="Portrait" class="w-full h-full object-cover rounded-md" />
+</div>
+<div class="col-span-1 md:col-span-2 flex flex-col gap-4">
+<p class="font-body text-base md:text-lg leading-relaxed text-text-secondary-light dark:text-text-secondary-dark">I am a multidisciplinary professional with a unique blend of expertise in Cloud &amp; Network Security, Graphic Design, and Video Editing. My career is driven by a passion for solving complex problems—whether that involves architecting secure cloud infrastructures, crafting compelling visual narratives, or producing dynamic video content. I thrive at the intersection of analytical precision and creative intuition.
+                            </p>
+<p class="font-body text-base md:text-lg leading-relaxed text-text-secondary-light dark:text-text-secondary-dark">This space is a reflection of my journey—a portfolio showcasing my work, thoughts, and explorations across these diverse yet interconnected fields.</p>
+</div>
+</section>
+<section class="flex flex-col gap-8" id="skills">
+<div class="flex items-center gap-4">
+<h2 class="font-display text-3xl font-bold tracking-tight text-primary">#skills</h2>
+<div class="flex-grow h-px bg-border-light dark:bg-border-dark"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="border border-border-light dark:border-border-dark p-6 rounded-lg flex flex-col gap-4 bg-white dark:bg-background-dark/50 shadow-sm transition-transform hover:-translate-y-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">cloud_sync</span>
+<h3 class="font-display font-bold text-lg">Cloud &amp; Network Security</h3>
+</div>
+<p class="font-body text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">AWS, Azure, Kubernetes, Docker, Terraform, CI/CD Security, Firewalls, Python.</p>
+</div>
+<div class="border border-border-light dark:border-border-dark p-6 rounded-lg flex flex-col gap-4 bg-white dark:bg-background-dark/50 shadow-sm transition-transform hover:-translate-y-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-3xl">palette</span>
+<h3 class="font-display font-bold text-lg">Graphic Design</h3>
+</div>
+<p class="font-body text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">Adobe Photoshop, Adobe Illustrator, Figma, Canva.</p>
+</div>
+<div class="border border-border-light dark:border-border-dark p-6 rounded-lg flex flex-col gap-4 bg-white dark:bg-background-dark/50 shadow-sm transition-transform hover:-translate-y-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent text-3xl">movie_edit</span>
+<h3 class="font-display font-bold text-lg">Video Editing</h3>
+</div>
+<p class="font-body text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">Adobe Premiere Pro, After Effects, Final Cut Pro, DaVinci Resolve.</p>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-8" id="fun-facts">
+<div class="flex items-center gap-4">
+<h2 class="font-display text-3xl font-bold tracking-tight text-primary">#fun-facts</h2>
+<div class="flex-grow h-px bg-border-light dark:bg-border-dark"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex items-start gap-3 p-4 rounded-lg bg-primary/5 dark:bg-primary/10">
+<span class="material-symbols-outlined text-primary mt-1">terminal</span>
+<p class="font-body text-base text-text-secondary-light dark:text-text-secondary-dark">I'm a certified ethical hacker.</p>
+</div>
+<div class="flex items-start gap-3 p-4 rounded-lg bg-accent/5 dark:bg-accent/10">
+<span class="material-symbols-outlined text-accent mt-1">theaters</span>
+<p class="font-body text-base text-text-secondary-light dark:text-text-secondary-dark">I create short films in my spare time.</p>
+</div>
+<div class="flex items-start gap-3 p-4 rounded-lg bg-secondary/5 dark:bg-secondary/10">
+<span class="material-symbols-outlined text-secondary mt-1">architecture</span>
+<p class="font-body text-base text-text-secondary-light dark:text-text-secondary-dark">My favorite design movement is Bauhaus.</p>
+</div>
+<div class="flex items-start gap-3 p-4 rounded-lg bg-primary/5 dark:bg-primary/10">
+<span class="material-symbols-outlined text-primary mt-1">casino</span>
+<p class="font-body text-base text-text-secondary-light dark:text-text-secondary-dark">I can solve a Rubik's Cube in under a minute.</p>
+</div>
+</div>
+</section>
+<section class="text-center flex flex-col items-center gap-6 py-12">
+<h2 class="text-3xl font-bold font-display">Let's Create Together</h2>
+<p class="font-body text-lg max-w-2xl text-text-secondary-light dark:text-text-secondary-dark">I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. If you have something in mind, I'd love to hear from you.</p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold transition-transform hover:scale-105">
+<span class="truncate">Let's Connect</span>
+</button>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark text-text-light dark:text-text-dark text-base font-bold transition-colors hover:bg-black/5 dark:hover:bg-white/5">
+<span class="truncate">View My CV</span>
+</button>
+</div>
+</section>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

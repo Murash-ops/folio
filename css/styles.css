@@ -1,0 +1,52 @@
+/* Global custom styles for the portfolio pages */
+/* Small additions layered on top of Tailwind CDN config already used in pages */
+:root{
+  --bg-dark: #0a0a0a;
+  --muted: #94a3b8;
+}
+html,body{
+  height:100%;
+}
+body{
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.layout-container{
+  max-width:1400px;
+  margin:0 auto;
+}
+/* small utility for card images to match designs */
+.card-img-round{
+  border-radius:0.75rem;
+  overflow:hidden;
+}
+/* accessible focus styles for keyboard navigation */
+a:focus{outline:3px solid rgba(23,255,191,0.12);outline-offset:3px}
+
+/* footer small text sizing */
+footer p{opacity:0.9}
+
+/* Background image classes for featured projects */
+.bg-project-1 {
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXBkd2wUU2xeHmW-QAmABxKG4onxdRgTR2EtZyyppP2mSMOHbK5IvnCfaw7_Fg6Efc95F1-G0XVEHc78SzUD2YHc1F4lX4Xcy8Zv0js5xWKI3d8ODih_wg2dV0sRmYSSUFx1N8OnHySE_jvFek7yRlnnqGg25fUbJgO8nEHwnupNe8fFeZXAmF6cc0x-ThoaGU6izowpf9FQtrwxZXP-VQUWgoOTiBMME19e0YuCAF8uoUSIf6OnqGizmKWqVfr0IEdd2e5HSrepTI');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-project-2 {
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4kPFGQMhS4oKtLFMKLk_CC51cATASK5LDL9QB09hmfo3pAgzbdkJzJbpUWYb7JmYduR9SEfLsSXAcSarYpTTxOi88y-HJm5GPpLjajyiaVHcPzMYxsQ3rMGTUV2WGissN-rw19smoLCXh4rjImzS5hCIrwewAmlzFZy_1dLSwk6uyd6qghmr9ypFcRqKof8QPW--AgdjIykagjQQPNimZUIUeJJTIKY8Fy_TQK6nhm6LcIzWPdG5khZe1Sp65ABTrWcuIi_YpAdB2');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-project-3 {
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuiOlyq9nxkAgzKHWpU-g5DYY5Ooh2-EphsPhTPkrlV4IHnCicno8674h5zHLv1ufpYlwprK7I5Fmi3CCWJU56rXiOeL0JAw0fysN-wWq6Qd5cNnqBWvhRvet2k8FPR4aqnwem9B01IqMeJqAsZfY5zRXynrI0t0Exg-c7D4gU_IqV2iGm9NTi8Vkx2NqJgSxdLh9s-YrpGDfhcRTFpStmZo0GTPvK3EcIIw31RQyyA1ezpSV-Dt418sGcm9dYhycZqlcIBvI_Ko-0');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Responsive tweaks for very small screens */
+@media (max-width:420px){
+  .layout-content-container{padding-left:12px;padding-right:12px}
+}

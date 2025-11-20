@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog - Insights on Security &amp; Design</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link rel="stylesheet" href="css/styles.css"/>
+<link rel="icon" href="assets/favicon.svg"/>
+<script id="tailwind-config">
+        tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#8A3FFC",
+              "background-light": "#f6f6f8",
+              "background-dark": "#0B090F",
+              "card-light": "#FFFFFF",
+              "card-dark": "#16131D",
+              "text-light": "#111827",
+              "text-dark": "#F4F1F9",
+              "text-text-light": "#111827",
+              "text-text-dark": "#F4F1F9",
+              "subtext-light": "#6B7280",
+              "subtext-dark": "#B3ACBF",
+              "border-light": "#E5E7EB",
+              "border-dark": "#27272A",
+              "surface-dark": "#16131D"
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+      .bg-grid-light {
+        /* lighter, low-opacity grid for subtle background */
+        background-image: linear-gradient(to right, rgba(220,215,232,0.06) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(220,215,232,0.06) 1px, transparent 1px);
+        background-size: 2rem 2rem;
+        opacity: 0.95;
+      }
+      .bg-grid-dark {
+        /* darker grid with very low opacity */
+        background-image: linear-gradient(to right, rgba(42,35,61,0.06) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(42,35,61,0.06) 1px, transparent 1px);
+        background-size: 2rem 2rem;
+        opacity: 0.95;
+      }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="absolute inset-0 z-[-1] bg-grid-light dark:bg-grid-dark [mask-image:radial-gradient(ellipse_at_center,black_10%,transparent_70%)]"></div>
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light dark:border-border-dark px-4 sm:px-10 py-3">
+  <div class="flex items-center gap-4 text-black dark:text-white">
+    <div class="size-6 text-primary">
+  <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_6_319)">
+          <path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clipPath>
+        </defs>
+      </svg>
+    </div>
+    <h2 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em]">Portfolio</h2>
+  </div>
+  <div class="hidden md:flex flex-1 justify-end gap-8">
+    <div class="flex items-center gap-9">
+        <a class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="home_page.html">Home</a>
+        <a class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="about_page.html">About</a>
+        <a class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="projects_page.html">Projects</a>
+        <a aria-current="page" class="text-primary dark:text-primary text-sm font-bold leading-normal" href="blog_page.html">Blog</a>
+    </div>
+    <a href="contact_page.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em]">
+      <span class="truncate">Get in Touch</span>
+    </a>
+  </div>
+</header>
+<main class="container mx-auto flex-1 px-4 py-8 lg:py-16">
+<div class="mb-12 text-center">
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] text-text-light dark:text-text-dark sm:text-5xl lg:text-6xl">Insights &amp; Explorations</h1>
+<p class="mt-3 max-w-2xl mx-auto text-base font-normal leading-normal text-slate-500 dark:text-slate-400">Exploring the convergence of technology and creativity, from cloud security to motion graphics.</p>
+</div>
+<div class="flex flex-col gap-12 lg:flex-row">
+<aside class="w-full lg:w-64 lg:sticky lg:top-24 lg:self-start">
+<div class="flex flex-col gap-8">
+<div>
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="relative flex w-full flex-1 items-stretch rounded-lg h-full">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-subtle-light dark:border-subtle-dark text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 bg-background-light/50 dark:bg-background-dark/50 h-full placeholder:text-slate-400 dark:placeholder:text-slate-500 px-4 pl-10 text-base font-normal leading-normal backdrop-blur-sm" placeholder="Search articles..." value=""/>
+<div class="absolute inset-y-0 left-0 text-slate-400 dark:text-slate-500 flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+</div>
+</label>
+</div>
+<div>
+<h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Categories</h3>
+<div class="flex gap-2 flex-wrap">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-primary text-white dark:text-text-light">All</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-white/50 dark:bg-subtle-dark hover:bg-primary/20 dark:hover:bg-primary/30 backdrop-blur-sm">Security</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-white/50 dark:bg-subtle-dark hover:bg-primary/20 dark:hover:bg-primary/30 backdrop-blur-sm">Design</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-white/50 dark:bg-subtle-dark hover:bg-primary/20 dark:hover:bg-primary/30 backdrop-blur-sm">Video</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-white/50 dark:bg-subtle-dark hover:bg-primary/20 dark:hover:bg-primary/30 backdrop-blur-sm">Cloud</button>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-1">
+<div class="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2">
+<article class="group relative flex flex-col">
+<div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 rounded-2xl bg-white/50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-subtle-dark/50 sm:-inset-x-6 sm:rounded-3xl"></div>
+<a class="relative z-10" href="#">
+<div class="mb-4 block overflow-hidden rounded-xl border border-subtle-light dark:border-subtle-dark">
+<img class="aspect-[16/9] w-full object-cover transition-transform duration-300 group-hover:scale-105" alt="Abstract code on a screen with logos for React, TypeScript, and Node.js" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgVF09Rta8k4apnLA0glc0Zns-0x4ddIWfMU5O73v0iNJkomgUG9at_jLJRC0JA7nxTO0wgjEUX_LFVhmrp_f3nwDh00nXCEDQAcRKJI0ksKMOsfS9avUe2wJMcAYjTcyOPwJ1vGLUunz3ynplBHkUS9kEbCC2MIK-UhiAxQ7YPnFu3OkubTVOfxNeIduMLefJSWmktKLcDGHya3Bylo-Bax40yQNQ39RZhwHBjyHn4oAk05uCAW2qPyss1b98Gdu2V0Nykum5XCYV"/>
+</div>
+<div class="flex items-center gap-x-4 text-xs font-medium text-slate-500 dark:text-slate-400">
+<time datetime="2024-04-15">April 15, 2024</time>
+<span class="relative z-10 rounded-full bg-primary/10 px-3 py-1 font-medium text-primary dark:text-primary/90">Cloud Security</span>
+</div>
+<h3 class="mt-3 text-lg font-bold leading-snug tracking-tight text-text-light dark:text-text-dark">
+<span class="bg-gradient-to-r from-accent to-accent bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 group-hover:bg-[length:100%_2px]">Securing Your Cloud Infrastructure: A Deep Dive</span>
+</h3>
+<p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">An in-depth guide to network segmentation and IAM policies for robust cloud security posture management.</p>
+</a>
+</article>
+<article class="group relative flex flex-col">
+<div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 rounded-2xl bg-white/50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-subtle-dark/50 sm:-inset-x-6 sm:rounded-3xl"></div>
+<a class="relative z-10" href="#">
+<div class="mb-4 block overflow-hidden rounded-xl border border-subtle-light dark:border-subtle-dark">
+<img class="aspect-[16/9] w-full object-cover transition-transform duration-300 group-hover:scale-105" alt="A person's hands typing on a laptop with lines of code visible on the screen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhb_EjQLcpMJsg_zDhSfq0Jq-_xi1zDcyG8iMiORLusY-VlW7uhcdX1ARjcS4ZRrHY7nMvnXC-PctMs_Q7C6wyESSkT6E96GyY-H4afDxrXfz-mKaOyOS9gSfRt72FcWrFQzzTl-sleiMpX4KtR0QWj75cfy9lZnJyf52zNzx2Ls_BFbOYFeKLD-YHfgaiyawE03TsNJDPzMf5Bh5LflcSfrqf0Sfbv-VCmgpPVaqtnTarKFMW1PDWR8L2OW3v5YzWt_2_pbdLtBZZ"/>
+</div>
+<div class="flex items-center gap-x-4 text-xs font-medium text-slate-500 dark:text-slate-400">
+<time datetime="2024-03-28">March 28, 2024</time>
+<span class="relative z-10 rounded-full bg-primary/10 px-3 py-1 font-medium text-primary dark:text-primary/90">Graphic Design</span>
+</div>
+<h3 class="mt-3 text-lg font-bold leading-snug tracking-tight text-text-light dark:text-text-dark">
+<span class="bg-gradient-to-r from-accent to-accent bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 group-hover:bg-[length:100%_2px]">The Art of Visual Storytelling in Branding</span>
+</h3>
+<p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">Exploring how typography, color theory, and composition come together to create compelling brand identities.</p>
+</a>
+</article>
+<article class="group relative flex flex-col">
+<div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 rounded-2xl bg-white/50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-subtle-dark/50 sm:-inset-x-6 sm:rounded-3xl"></div>
+<a class="relative z-10" href="#">
+<div class="mb-4 block overflow-hidden rounded-xl border border-subtle-light dark:border-subtle-dark">
+<img class="aspect-[16/9] w-full object-cover transition-transform duration-300 group-hover:scale-105" alt="A well-organized and minimalist desk setup with a laptop, notebook, and plant, signifying productivity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGxrvFTmv7iz6DtMJhLsdI9ZfJ7EO_aVUr890_LXJHmTKXPwECxzkZiO2k7XiJI0FVz-SRc53xtGAzHHXAOUkRU2V6xI5RfQonA2ypVKxOPlm-T__VqLT9NKcJN-SvEbfSunmyP_sPWngVl-RyQpRDXHIt3IL5bs1Wx6p2YSP_76AxICevm544Rhx_9dgnIw35dbBReCpC-4-CiP4kcNNX7ni1HF83uIrV0EXvQL55M4HHqzJDZPEYNsUwE6yeB9MLNtih3LTF4Lby"/>
+</div>
+<div class="flex items-center gap-x-4 text-xs font-medium text-slate-500 dark:text-slate-400">
+<time datetime="2024-03-10">March 10, 2024</time>
+<span class="relative z-10 rounded-full bg-primary/10 px-3 py-1 font-medium text-primary dark:text-primary/90">Video Editing</span>
+</div>
+<h3 class="mt-3 text-lg font-bold leading-snug tracking-tight text-text-light dark:text-text-dark">
+<span class="bg-gradient-to-r from-accent to-accent bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 group-hover:bg-[length:100%_2px]">Creating Dynamic Motion Graphics for Social Media</span>
+</h3>
+<p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">A step-by-step tutorial on creating engaging, short-form video content with Adobe After Effects and Premiere Pro.</p>
+</a>
+</article>
+<article class="group relative flex flex-col">
+<div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 rounded-2xl bg-white/50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-subtle-dark/50 sm:-inset-x-6 sm:rounded-3xl"></div>
+<a class="relative z-10" href="#">
+<div class="mb-4 block overflow-hidden rounded-xl border border-subtle-light dark:border-subtle-dark">
+<img class="aspect-[16/9] w-full object-cover transition-transform duration-300 group-hover:scale-105" alt="A colourful abstract gradient representing creative web development concepts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGwtV5s_NjkIb5UzIIokuj0GV_a_8IrK4F7h_TvXEApc2OeX4m7jg2CV6pHmeqYf7QZFOoC3uBU-IEzaaAYJKtMPUcr76u_ZaQrqSljWjw2q2Af9bnoJNz_FIWnR4UjcwXJJR3B0Rh9q7LAaqBEaa_5PZ0EKJW7vy5Sf2GVpsvoR2hli-S3dlDRwccG9bBKjF7k6iGlzOjdDOvnkzqIvVlG_BU1ChkDSIYyf69U_EaAd7ruKBo84xhxV1CE-8luEqXEBvCx593BWG1"/>
+</div>
+<div class="flex items-center gap-x-4 text-xs font-medium text-slate-500 dark:text-slate-400">
+<time datetime="2024-02-22">February 22, 2024</time>
+<span class="relative z-10 rounded-full bg-primary/10 px-3 py-1 font-medium text-primary dark:text-primary/90">Threat Detection</span>
+</div>
+<h3 class="mt-3 text-lg font-bold leading-snug tracking-tight text-text-light dark:text-text-dark">
+<span class="bg-gradient-to-r from-accent to-accent bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 group-hover:bg-[length:100%_2px]">Deconstructing a Zero-Day Exploit</span>
+</h3>
+<p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">A technical breakdown of a recent network intrusion event, analyzing the attack vector and mitigation strategies.</p>
+</a>
+</article>
+</div>
+<nav aria-label="Pagination" class="mt-16 flex items-center justify-center gap-4">
+<a class="flex h-10 w-10 items-center justify-center rounded-lg border border-subtle-light dark:border-subtle-dark text-slate-500 dark:text-slate-400 hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg border border-transparent text-slate-500 dark:text-slate-400 hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">1</a>
+<a aria-current="page" class="flex h-10 w-10 items-center justify-center rounded-lg border border-primary text-primary bg-primary/10 font-bold" href="#">2</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg border border-transparent text-slate-500 dark:text-slate-400 hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">3</a>
+<span class="text-slate-500 dark:text-slate-400">...</span>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg border border-transparent text-slate-500 dark:text-slate-400 hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">8</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg border border-subtle-light dark:border-subtle-dark text-slate-500 dark:text-slate-400 hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

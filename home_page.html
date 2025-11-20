@@ -1,0 +1,180 @@
+ !DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>John Doe - Security Specialist, Designer &amp; Editor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link rel="stylesheet" href="css/styles.css"/>
+<link rel="icon" href="assets/favicon.svg"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#8A3FFC",
+              "background-light": "#f6f6f8",
+              "background-dark": "#0B090F",
+              "surface-dark": "#16131D",
+              "text-primary-dark": "#F4F1F9",
+              "text-secondary-dark": "#B3ACBF",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            animation: {
+              'spin-slow': 'spin 10s linear infinite',
+              'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+            },
+            keyframes: {
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            }
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+      .fade-in-up-staggered > * {
+        animation: fade-in-up 0.5s ease-out forwards;
+        opacity: 0;
+      }
+      .fade-in-up-staggered > *:nth-child(1) { animation-delay: 100ms; }
+      .fade-in-up-staggered > *:nth-child(2) { animation-delay: 200ms; }
+      .fade-in-up-staggered > *:nth-child(3) { animation-delay: 300ms; }
+      .fade-in-up-staggered > *:nth-child(4) { animation-delay: 400ms; }
+      .fade-in-up-staggered > *:nth-child(5) { animation-delay: 500ms; }
+      .gradient-text {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-rose-400;
+      }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-text-primary-dark antialiased">
+<div class="relative w-full overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<main class="flex flex-1 justify-center py-5 sm:px-8 md:px-16 lg:px-24 xl:px-40">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-gray-200 dark:border-surface-dark/10 px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-black dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em]">Portfolio</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+  <a aria-current="page" class="text-primary dark:text-primary text-sm font-bold leading-normal" href="home_page.html">Home</a>
+  <a class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="about_page.html">About</a>
+  <a class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="projects_page.html">Projects</a>
+  <a class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="blog_page.html">Blog</a>
+</div>
+<a href="contact_page.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Get in Touch</span>
+</a>
+</div>
+</header>
+<section class="py-24 px-4 overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+<div class="md:col-span-3 flex flex-col gap-4 text-center md:text-left items-center md:items-start fade-in-up-staggered">
+<p class="text-gray-600 dark:text-text-secondary-dark text-lg font-medium">Hello, I'm John.</p>
+<h1 class="text-gray-900 dark:text-text-primary-dark text-4xl lg:text-5xl font-black leading-tight tracking-[-0.033em]">A Creative Professional in <span class="gradient-text">Security</span>, <span class="gradient-text">Design</span>, &amp; <span class="gradient-text">Video</span>.</h1>
+<p class="text-gray-600 dark:text-text-secondary-dark text-lg max-w-lg">I bring a unique blend of technical security expertise and creative passion to build secure, beautiful, and engaging digital experiences.</p>
+<div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+<a href="projects_page.html" class="flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all duration-300 transform hover:scale-105">
+<span class="truncate">See My Work</span>
+</a>
+<button class="flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-transparent text-gray-700 dark:text-text-secondary-dark text-base font-bold leading-normal tracking-[0.015em] ring-1 ring-inset ring-gray-300 dark:ring-surface-dark hover:bg-gray-100 dark:hover:bg-surface-dark transition-colors duration-300">
+<span class="truncate">Download Resume</span>
+</button>
+</div>
+</div>
+<div class="relative md:col-span-2 flex justify-center items-center animate-fade-in-up [animation-delay:600ms] opacity-0 order-first md:order-last">
+<div class="absolute w-full max-w-xs aspect-square bg-gradient-to-br from-primary to-rose-400 rounded-full blur-2xl opacity-40"></div>
+<div class="relative w-64 h-64 sm:w-72 sm:h-72 p-2 bg-white/20 dark:bg-surface-dark/40 rounded-3xl backdrop-blur-sm shadow-2xl shadow-primary/20 rotate-[-12deg] transition-transform duration-300 hover:rotate-[-6deg] hover:scale-105">
+  <img alt="Portrait" class="w-full h-full object-cover rounded-2xl" src="assets/images/home-hero.jpg"/>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-12 px-4">
+<div class="border-b border-gray-200 dark:border-surface-dark pb-3">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Featured Work</h2>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
+<div class="flex flex-col gap-4 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/30 bg-project-1" aria-label="Abstract gradient of blue and purple for Project One"></div>
+<div class="flex flex-col gap-3">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-bold leading-normal">Cloud Security Audit</p>
+<p class="text-gray-600 dark:text-text-secondary-dark text-sm font-normal leading-normal">Comprehensive security assessment for a cloud infrastructure.</p>
+</div>
+<div class="flex gap-2 flex-wrap">
+<div class="flex h-7 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-surface-dark px-3">
+<p class="text-gray-700 dark:text-text-secondary-dark text-xs font-medium leading-normal">Cloud Security</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/30 bg-project-2" aria-label="Abstract pattern of green and yellow waves for Project Two"></div>
+<div class="flex flex-col gap-3">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-bold leading-normal">Brand Identity Design</p>
+<p class="text-gray-600 dark:text-text-secondary-dark text-sm font-normal leading-normal">Visual identity and branding guide for a tech startup.</p>
+</div>
+<div class="flex gap-2 flex-wrap">
+<div class="flex h-7 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-surface-dark px-3">
+<p class="text-gray-700 dark:text-text-secondary-dark text-xs font-medium leading-normal">Graphic Design</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/30 bg-project-3" aria-label="Abstract visual of orange and red liquid shapes for Project Three"></div>
+<div class="flex flex-col gap-3">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-bold leading-normal">Promotional Video</p>
+<p class="text-gray-600 dark:text-text-secondary-dark text-sm font-normal leading-normal">A short, engaging promotional video for a product launch.</p>
+</div>
+<div class="flex gap-2 flex-wrap">
+<div class="flex h-7 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-surface-dark px-3">
+<p class="text-gray-700 dark:text-text-secondary-dark text-xs font-medium leading-normal">Video Editing</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="mt-20 border-t border-solid border-gray-200 dark:border-surface-dark py-8 px-4">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+<p class="text-sm text-gray-600 dark:text-text-secondary-dark">© 2024 John Doe. All rights reserved.</p>
+<div class="flex items-center gap-4">
+<span class="text-gray-600 dark:text-text-secondary-dark opacity-60 cursor-not-allowed" aria-disabled="true" aria-label="Games">
+<span class="material-symbols-outlined">stadia_controller</span>
+</span>
+<span class="text-gray-600 dark:text-text-secondary-dark opacity-60 cursor-not-allowed" aria-disabled="true" aria-label="Code">
+<span class="material-symbols-outlined">code</span>
+</span>
+<span class="text-gray-600 dark:text-text-secondary-dark opacity-60 cursor-not-allowed" aria-disabled="true" aria-label="Email">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+</footer>
+</div>
+</main>
+</div>
+</div>
+</body></html>
