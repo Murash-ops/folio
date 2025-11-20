@@ -1,4 +1,5 @@
 (function(){
+  let allProjects = [];
   async function loadProjects(){
     try{
       // Try both absolute and relative paths for GitHub Pages compatibility
@@ -11,7 +12,9 @@
         if (!res.ok) throw new Error('Not found at data/projects.json');
       }
       const projects = await res.json();
-      renderProjects(projects);
+      allProjects = projects;
+      renderProjects(allProjects);
+      setupProjectFilters();
     }catch(e){
       const container = document.getElementById('projects-list');
       if(container) container.innerHTML = `<div class="text-red-500">Failed to load projects. Please check your data/projects.json path and try again.</div>`;
@@ -32,6 +35,31 @@
         </a>
       </article>
     `).join('');
+  }
+
+  function normalize(str){
+    return String(str || '').toLowerCase().trim().replace(/\s+/g,'-');
+  }
+
+  function setupProjectFilters(){
+    const buttons = document.querySelectorAll('.project-filter-btn');
+    if(!buttons || !buttons.length) return;
+    buttons.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const filter = btn.dataset.filter || 'all';
+        // toggle active styles
+        buttons.forEach(b=>b.classList.remove('bg-primary','text-black'));
+        btn.classList.add('bg-primary','text-black');
+        applyProjectFilter(filter);
+      });
+    });
+  }
+
+  function applyProjectFilter(filter){
+    if(filter === 'all') return renderProjects(allProjects);
+    const normalized = normalize(filter);
+    const filtered = allProjects.filter(p => Array.isArray(p.tags) && p.tags.some(t => normalize(t) === normalized));
+    renderProjects(filtered);
   }
   // init
   document.addEventListener('DOMContentLoaded', loadProjects);

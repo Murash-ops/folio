@@ -105,13 +105,13 @@
 </div>
 <div>
 <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Categories</h3>
-<div class="flex gap-2 flex-wrap">
-<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-primary text-white dark:text-text-light">All</button>
-<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-white/50 dark:bg-subtle-dark hover:bg-primary/20 dark:hover:bg-primary/30 backdrop-blur-sm">Security</button>
-<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-white/50 dark:bg-subtle-dark hover:bg-primary/20 dark:hover:bg-primary/30 backdrop-blur-sm">Design</button>
-<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-white/50 dark:bg-subtle-dark hover:bg-primary/20 dark:hover:bg-primary/30 backdrop-blur-sm">Video</button>
-<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-white/50 dark:bg-subtle-dark hover:bg-primary/20 dark:hover:bg-primary/30 backdrop-blur-sm">Cloud</button>
-</div>
+      <div class="flex gap-2 flex-wrap">
+        <button data-filter="all" class="blog-filter-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-primary text-white dark:text-text-light">All</button>
+        <button data-filter="security" class="blog-filter-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-white/50 dark:bg-subtle-dark hover:bg-primary/20 dark:hover:bg-primary/30 backdrop-blur-sm">Security</button>
+        <button data-filter="design" class="blog-filter-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-white/50 dark:bg-subtle-dark hover:bg-primary/20 dark:hover:bg-primary/30 backdrop-blur-sm">Design</button>
+        <button data-filter="video" class="blog-filter-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-white/50 dark:bg-subtle-dark hover:bg-primary/20 dark:hover:bg-primary/30 backdrop-blur-sm">Video</button>
+        <button data-filter="cloud" class="blog-filter-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium transition-colors bg-white/50 dark:bg-subtle-dark hover:bg-primary/20 dark:hover:bg-primary/30 backdrop-blur-sm">Cloud</button>
+      </div>
 </div>
 </div>
 </aside>
@@ -199,5 +199,6 @@
 </div>
 </main>
 </div>
-
+<script src="js/blogs-filter.js"></script>
+</div>
 </body></html>
