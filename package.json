@@ -1,0 +1,13 @@
+{
+  "name": "folio-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:projects": "node scripts/generate-project-pages.js",
+    "build:blog": "node scripts/build_blog.js",
+    "build": "npm run build:projects && npm run build:blog"
+  },
+  "dependencies": {
+    "marked": "^5.0.0"
+  }
+}

@@ -2,11 +2,61 @@
   {
     "title": "Secure Network Infrastructure",
     "slug": "secure-network-infrastructure",
-    "shortDescription": "Designed and implemented a multi-tiered secure network architecture on AWS.",
+    "shortDescription": "Designed and implemented a multi-tiered, secure network architecture on AWS.",
     "tags": ["Cloud Security","AWS","Networking"],
     "thumb": "assets/images/projects/secure-network-thumb.jpg",
     "hero": "assets/images/projects/secure-network-hero.jpg",
     "date": "2024-10-01",
     "contentUrl": "projects/secure-network-infrastructure.html"
+  },
+  {
+    "title": "IaC with Terraform",
+    "slug": "iac-with-terraform",
+    "shortDescription": "Automated firewall rule provisioning using Terraform for repeatable security policies.",
+    "tags": ["Network Security","Terraform"],
+    "thumb": "assets/images/projects/iac-terraform-thumb.jpg",
+    "hero": "assets/images/projects/iac-terraform-hero.jpg",
+    "date": "2024-08-10",
+    "contentUrl": "projects/iac-with-terraform.html"
+  },
+  {
+    "title": "Brand Identity for Nova",
+    "slug": "brand-identity-nova",
+    "shortDescription": "Visual identity, logo, and typography for a tech startup.",
+    "tags": ["Graphic Design","Branding"],
+    "thumb": "assets/images/projects/nova-brand-thumb.jpg",
+    "hero": "assets/images/projects/nova-brand-hero.jpg",
+    "date": "2023-12-05",
+    "contentUrl": "projects/brand-identity-nova.html"
+  },
+  {
+    "title": "Social Media Campaign",
+    "slug": "social-media-campaign",
+    "shortDescription": "Cross-platform visuals and creative direction for a marketing campaign.",
+    "tags": ["Graphic Design","Social Media"],
+    "thumb": "assets/images/projects/social-campaign-thumb.jpg",
+    "hero": "assets/images/projects/social-campaign-hero.jpg",
+    "date": "2024-02-14",
+    "contentUrl": "projects/social-media-campaign.html"
+  },
+  {
+    "title": "Product Launch Promo",
+    "slug": "product-launch-promo",
+    "shortDescription": "High-energy promotional video with motion graphics and sound design.",
+    "tags": ["Video Editing","Promo"],
+    "thumb": "assets/images/projects/product-promo-thumb.jpg",
+    "hero": "assets/images/projects/product-promo-hero.jpg",
+    "date": "2023-09-20",
+    "contentUrl": "projects/product-launch-promo.html"
+  },
+  {
+    "title": "Documentary Short: The Artisan",
+    "slug": "documentary-the-artisan",
+    "shortDescription": "Short documentary focusing on craft, color grading and storytelling.",
+    "tags": ["Video","Documentary"],
+    "thumb": "assets/images/projects/artisan-doc-thumb.jpg",
+    "hero": "assets/images/projects/artisan-doc-hero.jpg",
+    "date": "2022-11-08",
+    "contentUrl": "projects/documentary-the-artisan.html"
   }
 ]
