@@ -1,7 +1,13 @@
 /* Global custom styles for the portfolio pages */
 /* Small additions layered on top of Tailwind CDN config already used in pages */
 :root{
-  --bg-dark: #0a0a0a;
+  /* Palette variables for site-wide consistency */
+  --color-primary: #8A3FFC;
+  --color-accent: #FFB86C;
+  --bg-light: #f6f6f8;
+  --bg-dark: #0B090F;
+  --text-light: #111827;
+  --text-dark: #F4F1F9;
   --muted: #94a3b8;
 }
 html,body{
@@ -14,11 +20,26 @@ body{
 .layout-container{
   max-width:1400px;
   margin:0 auto;
+  padding-left:1rem;
+  padding-right:1rem;
+}
+/* content wrapper used across pages (keeps inner width consistent) */
+.layout-content-container{
+  max-width:1200px;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
 }
 /* small utility for card images to match designs */
 .card-img-round{
   border-radius:0.75rem;
   overflow:hidden;
+}
+/* make images and media fluid by default */
+img, picture, video, svg{
+  max-width:100%;
+  height:auto;
+  display:block;
 }
 /* accessible focus styles for keyboard navigation */
 a:focus{outline:3px solid rgba(23,255,191,0.12);outline-offset:3px}
@@ -49,4 +70,25 @@ footer p{opacity:0.9}
 /* Responsive tweaks for very small screens */
 @media (max-width:420px){
   .layout-content-container{padding-left:12px;padding-right:12px}
+  :root{font-size:15px}
 }
+
+/* Typography scaling and container padding for medium/large screens */
+@media (min-width:640px){
+  :root{font-size:16px}
+  .layout-container{padding-left:1.5rem; padding-right:1.5rem}
+}
+@media (min-width:1024px){
+  :root{font-size:17px}
+  .layout-container{padding-left:2rem; padding-right:2rem}
+}
+
+/* Handy utility for centered site wrapper (fallback if tailwind container isn't used) */
+.site-container{max-width:1200px;margin:0 auto;padding-left:1rem;padding-right:1rem}
+
+/* Make interactive cards shrink gracefully */
+.card, .section-card{box-sizing:border-box}
+
+/* Provide nicer default link focus/hover for primary */
+.btn-primary{background:var(--color-primary);color:#000}
+.btn-accent{background:var(--color-accent);color:#000}
