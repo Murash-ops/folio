@@ -76,6 +76,23 @@ footer p{opacity:0.9}
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+/* Code block styling (Option B): normalize code blocks site-wide */
+pre, pre code {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size:0.95rem;
+  line-height:1.6;
+}
+pre {
+  background: #0f1724; /* dark slate */
+  color: #e6eef8;
+  padding:1rem;
+  border-radius:0.6rem;
+  overflow:auto;
+  box-shadow:0 6px 18px rgba(2,6,23,0.25);
+}
+.dark pre{background:#0b1220;color:#e6eef8}
+.prose pre{background:var(--tw-prose-pre-bg, #0f1724);color:var(--tw-prose-pre-code, #e6eef8)}
 }
 .bg-project-2 {
   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4kPFGQMhS4oKtLFMKLk_CC51cATASK5LDL9QB09hmfo3pAgzbdkJzJbpUWYb7JmYduR9SEfLsSXAcSarYpTTxOi88y-HJm5GPpLjajyiaVHcPzMYxsQ3rMGTUV2WGissN-rw19smoLCXh4rjImzS5hCIrwewAmlzFZy_1dLSwk6uyd6qghmr9ypFcRqKof8QPW--AgdjIykagjQQPNimZUIUeJJTIKY8Fy_TQK6nhm6LcIzWPdG5khZe1Sp65ABTrWcuIi_YpAdB2');
