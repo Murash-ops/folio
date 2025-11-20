@@ -53,13 +53,36 @@
         applyProjectFilter(filter);
       });
     });
+    // set initial active state to 'all' button and update heading
+    const defaultBtn = document.querySelector('.project-filter-btn[data-filter="all"]');
+    if(defaultBtn){
+      defaultBtn.classList.add('bg-primary','text-black');
+      updateProjectsHeading('all');
+    }
   }
 
   function applyProjectFilter(filter){
+    // update heading to match selected filter (use button label if available)
+    updateProjectsHeading(filter);
     if(filter === 'all') return renderProjects(allProjects);
     const normalized = normalize(filter);
     const filtered = allProjects.filter(p => Array.isArray(p.tags) && p.tags.some(t => normalize(t) === normalized));
     renderProjects(filtered);
+  }
+
+  function updateProjectsHeading(filter){
+    const heading = document.getElementById('projects-heading');
+    if(!heading) return;
+    const btn = document.querySelector(`.project-filter-btn[data-filter="${filter}"]`);
+    let label = 'All Projects';
+    if(btn){
+      const txt = btn.textContent.trim();
+      label = txt === 'All' ? 'All Projects' : `${txt} Projects`;
+    } else if(filter !== 'all'){
+      // fallback: use filter slug converted to readable text
+      label = filter.split('-').map(w => w.charAt(0).toUpperCase()+w.slice(1)).join(' ') + ' Projects';
+    }
+    heading.textContent = label;
   }
   // init
   document.addEventListener('DOMContentLoaded', loadProjects);
