@@ -13,6 +13,8 @@
       }
       const projects = await res.json();
       allProjects = projects;
+      // generate filter buttons from project tags, render projects, then wire filters
+      generateProjectFilters();
       renderProjects(allProjects);
       setupProjectFilters();
     }catch(e){
@@ -38,7 +40,28 @@
   }
 
   function normalize(str){
-    return String(str || '').toLowerCase().trim().replace(/\s+/g,'-');
+    return String(str || '').toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+  }
+
+  function generateProjectFilters(){
+    const container = document.getElementById('projects-filters');
+    if(!container) return;
+    const seen = new Set();
+    // collect tags in appearance order
+    allProjects.forEach(p=>{
+      if(Array.isArray(p.tags)){
+        p.tags.forEach(t=>{ if(t && !seen.has(t)){ seen.add(t); } });
+      }
+    });
+    const buttons = [];
+    // 'All' button
+    buttons.push(`<button data-filter="all" class="project-filter-btn flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card-light dark:bg-card-dark px-5 text-subtext-light dark:text-subtext-dark text-sm font-medium leading-normal hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-border-light dark:border-border-dark">All</button>`);
+    Array.from(seen).forEach(tag=>{
+      const slug = normalize(tag);
+      const label = tag;
+      buttons.push(`<button data-filter="${slug}" class="project-filter-btn flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card-light dark:bg-card-dark px-5 text-subtext-light dark:text-subtext-dark text-sm font-medium leading-normal hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-border-light dark:border-border-dark">${label}</button>`);
+    });
+    container.innerHTML = buttons.join('');
   }
 
   function setupProjectFilters(){

@@ -86,13 +86,7 @@
 <h1 class="text-text-light dark:text-text-dark text-5xl md:text-6xl font-black leading-tight tracking-[-0.033em]">My Work</h1>
 <p class="text-subtext-light dark:text-subtext-dark text-lg max-w-2xl">A showcase of my projects across technology and creative fields. Exploring the intersection of security, design, and motion.</p>
 </div>
-<div class="flex items-center justify-center gap-3 px-4 flex-wrap">
-    <button data-filter="all" class="project-filter-btn flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 text-black text-sm font-bold leading-normal">All</button>
-    <button data-filter="cloud-security" class="project-filter-btn flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card-light dark:bg-card-dark px-5 text-subtext-light dark:text-subtext-dark text-sm font-medium leading-normal hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-border-light dark:border-border-dark">Cloud &amp; Network Security</button>
-    <button data-filter="design" class="project-filter-btn flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card-light dark:bg-card-dark px-5 text-subtext-light dark:text-subtext-dark text-sm font-medium leading-normal hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-border-light dark:border-border-dark">Graphic Design</button>
-    <button data-filter="video" class="project-filter-btn flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card-light dark:bg-card-dark px-5 text-subtext-light dark:text-subtext-dark text-sm font-medium leading-normal hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-border-light dark:border-border-dark">Video Editing</button>
-    <button data-filter="branding" class="project-filter-btn flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card-light dark:bg-card-dark px-5 text-subtext-light dark:text-subtext-dark text-sm font-medium leading-normal hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-border-light dark:border-border-dark">Branding</button>
-</div>
+<div id="projects-filters" class="flex items-center justify-center gap-3 px-4 flex-wrap"></div>
 <!-- All projects are now rendered dynamically from data/projects.json by js/projects-renderer.js. If you still see old projects, clear your browser cache or force reload. -->
 </main>
 <!-- Data-driven projects container (rendered by js/projects-renderer.js) -->

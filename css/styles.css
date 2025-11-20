@@ -92,3 +92,24 @@ footer p{opacity:0.9}
 /* Provide nicer default link focus/hover for primary */
 .btn-primary{background:var(--color-primary);color:#000}
 .btn-accent{background:var(--color-accent);color:#000}
+
+/* Project case study / tendawema specific utilities (moved from inline styles) */
+.project-title{font-size:2.8rem;font-weight:700;text-align:center;margin-top:2rem;letter-spacing:-2px;color:#1a2236}
+.project-subtitle{font-size:2.2rem;font-weight:700;text-align:center;color:var(--color-accent);margin-bottom:0.5rem;letter-spacing:-2px}
+.project-summary{text-align:center;font-size:1.1rem;color:#444;margin-bottom:2rem}
+.section-card{background:#fff;border-radius:16px;padding:2rem;margin-bottom:2rem;color:#222;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.deliverables-list{list-style:none;padding:0}
+.deliverables-list li{display:flex;align-items:center;margin-bottom:1rem;font-size:1rem}
+.deliverables-list li svg{margin-right:0.75rem;color:#FFD600}
+.showcase-img{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04);padding:1rem;margin-bottom:1.5rem}
+.showcase-section{display:flex;flex-wrap:wrap;gap:2rem;margin-bottom:0.5rem}
+.showcase-section > div{flex:1 1 320px}
+.key-section{display:flex;flex-wrap:wrap;gap:2rem;margin-bottom:2rem}
+.key-section > div{flex:1 1 300px}
+.showcase-socials{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04);padding:1rem;margin-top:0.5rem}
+.btn-back{background:#FFD600;color:#222;font-weight:700;border-radius:999px;padding:0.75rem 2rem;border:none;margin-top:2rem;cursor:pointer;box-shadow:0 2px 8px rgba(255,214,0,0.08)}
+.hero-img{max-width:320px;width:100%;margin-left:auto;margin-right:auto;display:block}
+
+@media (max-width:900px){
+  .key-section,.showcase-section{flex-direction:column}
+}
